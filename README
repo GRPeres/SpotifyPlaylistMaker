@@ -1,0 +1,195 @@
+```markdown
+# Spotify Playlist Downloader
+
+Automatically download all your Spotify playlists into organized folders using `spotdl` and the Spotify API.
+
+---
+
+## 📋 Prerequisites
+
+1. **Python 3.8+** installed on your system.
+2. A **Spotify Developer Account** (free) to get API credentials.
+3. `spotdl` and `spotipy` installed (instructions below).
+
+---
+
+## 🛠 Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+```
+
+### 2. Configure Spotify API Credentials
+1. **Create a Spotify App** on the [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications).
+2. Get your **Client ID** and **Client Secret** from the app dashboard.
+3. **Find your Spotify User ID**:
+   - Log in to Spotify Web → Profile → URL ends with `/user/{your_user_id}`.
+
+### 3. Set Up Configuration
+1. Rename `config_template.py` to `config.py`:
+   ```bash
+   mv config_template.py config.py
+   ```
+2. Open `config.py` and replace the placeholders:
+   ```python
+   # Spotify API credentials
+   SPOTIPY_CLIENT_ID = 'your_client_id'          # From Spotify Developer Dashboard
+   SPOTIPY_CLIENT_SECRET = 'your_client_secret'  # From Spotify Developer Dashboard
+   SPOTIPY_REDIRECT_URI = 'http://localhost:8888/callback'  # Keep default or update in Spotify Dashboard
+
+   # Spotify user ID
+   USER_ID = 'your_spotify_user_id'  # e.g., 'gr.peres-br'
+
+   # Absolute output path for downloaded playlists
+   BASE_OUTPUT_PATH = 'C:/Music/Spotify'  # Replace with your desired path
+   ```
+
+### 4. Install Dependencies
+```bash
+pip install spotipy spotdl
+```
+
+### 5. Run the Script
+```bash
+python main.py
+```
+
+---
+
+## 🚀 Features
+- Downloads **all playlists** from your Spotify account.
+- Creates folders named after each playlist (e.g., `C:/Music/Spotify/Your Playlist Name`).
+- Press `Ctrl+C` to skip the current playlist and proceed to the next one.
+
+---
+
+## 🔒 Security Notes
+- **Never share `config.py`** (it contains sensitive credentials).
+- Add `config.py` to `.gitignore` to avoid accidental exposure.
+
+---
+
+## 📂 Folder Structure
+```
+your-repo/
+├── .gitignore
+├── config_template.py   # Template for credentials
+├── main.py              # Main script
+└── README.md
+```
+
+---
+
+## ❓ Troubleshooting
+- **Invalid credentials?** Double-check your Spotify API credentials in `config.py`.
+- **Playlist folders not created?** Ensure the `BASE_OUTPUT_PATH` is valid and writable.
+- **Spotify API errors?** Verify your app has the `playlist-read-private` scope enabled.
+
+---
+
+Developed with Python + ❤️. Let the music play!
+```
+
+---
+
+
+---
+#### PT/BR
+
+```markdown
+# Spotify Playlist Downloader (Downloader de Playlists do Spotify)
+
+Baixe automaticamente todas as suas playlists do Spotify em pastas organizadas usando `spotdl` e a API do Spotify.
+
+---
+
+## 📋 Pré-requisitos
+
+1. **Python 3.8+** instalado no seu sistema.
+2. Uma **Conta de Desenvolvedor Spotify** (gratuita) para obter credenciais da API.
+3. `spotdl` e `spotipy` instalados (instruções abaixo).
+
+---
+
+## 🛠 Instruções de Configuração
+
+### 1. Clone o Repositório
+```bash
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
+```
+
+### 2. Configure as Credenciais da API do Spotify
+1. **Crie um App Spotify** no [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/applications).
+2. Obtenha seu **Client ID** e **Client Secret** no painel do app.
+3. **Encontre seu User ID do Spotify**:
+   - Faça login no Spotify Web → Perfil → A URL termina com `/user/{seu_user_id}`.
+
+### 3. Configure o Arquivo de Configuração
+1. Renomeie `config_template.py` para `config.py`:
+   ```bash
+   mv config_template.py config.py
+   ```
+2. Abra `config.py` e substitua os placeholders:
+   ```python
+   # Credenciais da API do Spotify
+   SPOTIPY_CLIENT_ID = 'seu_client_id'           # Do Spotify Developer Dashboard
+   SPOTIPY_CLIENT_SECRET = 'seu_client_secret'   # Do Spotify Developer Dashboard
+   SPOTIPY_REDIRECT_URI = 'http://localhost:8888/callback'  # Mantenha o padrão ou atualize no Dashboard
+
+   # User ID do Spotify
+   USER_ID = 'seu_user_id_do_spotify'  # Exemplo: 'gr.peres-br'
+
+   # Caminho absoluto para salvar as playlists
+   BASE_OUTPUT_PATH = 'C:/Musicas/Spotify'  # Substitua com seu caminho desejado
+   ```
+
+### 4. Instale as Dependências
+```bash
+pip install spotipy spotdl
+```
+
+### 5. Execute o Script
+```bash
+python main.py
+```
+
+---
+
+## 🚀 Funcionalidades
+- Baixa **todas as playlists** da sua conta do Spotify.
+- Cria pastas com o nome de cada playlist (ex: `C:/Musicas/Spotify/Nome da Playlist`).
+- Pressione `Ctrl+C` para pular a playlist atual e ir para a próxima.
+
+---
+
+## 🔒 Notas de Segurança
+- **Nunca compartilhe `config.py`** (contém credenciais sensíveis).
+- Adicione `config.py` ao `.gitignore` para evitar exposição acidental.
+
+---
+
+## 📂 Estrutura de Pastas
+```
+seu-repositorio/
+├── .gitignore
+├── config_template.py   # Modelo para credenciais
+├── main.py              # Script principal
+└── README.md
+```
+
+---
+
+## ❓ Solução de Problemas
+- **Credenciais inválidas?** Verifique as credenciais da API no `config.py`.
+- **Pastas não são criadas?** Certifique-se de que `BASE_OUTPUT_PATH` é válido e tem permissão de escrita.
+- **Erros da API do Spotify?** Verifique se o app tem a permissão `playlist-read-private`.
+
+---
+
+Desenvolvido com Python + ❤️. Que a música toque!
+```
+
+---
