@@ -57,7 +57,7 @@ def download_playlist(playlist_url, output_folder):
     # Use spotdl CLI to download the playlist
     # Use the current Python executable to run spotdl
     python_executable = sys.executable  # Path to the current Python interpreter
-    command = f'"{python_executable}" -m spotdl {playlist_url} --output "{output_folder}"'
+    command = f'"{python_executable}" -m spotdl --bitrate 192k  {playlist_url} --output "{output_folder}"'
 
     try:
         print(f"Downloading playlist: {playlist_url}")
